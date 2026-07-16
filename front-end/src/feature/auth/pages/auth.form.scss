@@ -1,0 +1,1077 @@
+// ============================================
+// KEYFRAME ANIMATIONS - HUMAN-LIKE
+// ============================================
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes softBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes inputFocus {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 170, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(37, 99, 170, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 170, 0);
+    }
+}
+
+@keyframes buttonWave {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes labelSlide {
+    0% {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(37, 99, 170, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(37, 99, 170, 0);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes floatingStar {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+        opacity: 0.8;
+    }
+}
+
+@keyframes aurora {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    75% {
+        opacity: 0.3;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes orb1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(50px, -50px);
+    }
+    50% {
+        transform: translate(100px, 0);
+    }
+    75% {
+        transform: translate(50px, 50px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes orb2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-60px, 40px);
+    }
+    50% {
+        transform: translate(-80px, -60px);
+    }
+    75% {
+        transform: translate(30px, -40px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes cloudDrift {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+// ============================================
+// CELESTIAL ANIMATIONS
+// ============================================
+
+// Comet/Meteor animation
+@keyframes comet {
+    0% {
+        left: -10%;
+        top: 10%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        left: 110%;
+        top: 50%;
+        opacity: 0;
+    }
+}
+
+// Comet tail animation
+@keyframes cometTail {
+    0% {
+        opacity: 0;
+        box-shadow: none;
+    }
+    10% {
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(200, 150, 255, 0.8);
+    }
+    90% {
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(200, 150, 255, 0.8);
+    }
+    100% {
+        opacity: 0;
+        box-shadow: 0 0 50px rgba(200, 150, 255, 0.4);
+    }
+}
+
+// Moon glow animation
+@keyframes moonGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+                    inset -10px -10px 20px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.8),
+                    inset -10px -10px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+// Moon orbit
+@keyframes moonOrbit {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(30px, -40px);
+    }
+    50% {
+        transform: translate(0, -80px);
+    }
+    75% {
+        transform: translate(-30px, -40px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+// Nebula pulse
+@keyframes nebulaPulse {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: scale(1.1);
+    }
+}
+
+// Sparkle effect
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+// Shooting star
+@keyframes shootingStar {
+    0% {
+        left: -5%;
+        top: 20%;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        left: 105%;
+        top: 60%;
+        opacity: 0;
+    }
+}
+
+// Pulsing stars (different rhythm)
+@keyframes pulseStar {
+    0%, 100% {
+        opacity: 0.4;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.6;
+    }
+}
+
+// Floating particles
+@keyframes floatParticle {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 0;
+    }
+}
+
+// ============================================
+// STAR FIELD ANIMATIONS (100+ STARS)
+// ============================================
+
+@keyframes starTwinkle1 {
+    0%, 100% { opacity: 0.2; }
+    25% { opacity: 0.5; }
+    50% { opacity: 1; }
+    75% { opacity: 0.4; }
+}
+
+@keyframes starTwinkle2 {
+    0%, 100% { opacity: 0.3; }
+    20% { opacity: 0.6; }
+    50% { opacity: 0.8; }
+    80% { opacity: 0.2; }
+}
+
+@keyframes starTwinkle3 {
+    0%, 100% { opacity: 0.4; }
+    30% { opacity: 0.7; }
+    50% { opacity: 1; }
+    70% { opacity: 0.3; }
+}
+
+@keyframes starGlow {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(200, 150, 255, 0.5)); }
+    50% { filter: drop-shadow(0 0 8px rgba(200, 150, 255, 1)); }
+}
+
+// ============================================
+// MAIN CONTAINER WITH STARS, COMETS, MOON & FOREST
+// ============================================
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(135deg, #5a1e8c 0%, #2d0b5e 40%, #1a0033 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite, fadeInDown 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+
+    // Aurora effect 1 - left side
+    &::before {
+        content: '';
+        position: fixed;
+        top: -50%;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        background: radial-gradient(ellipse at 20% 50%, rgba(138, 43, 226, 0.4) 0%, transparent 50%);
+        animation: aurora 20s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    // Aurora effect 2 - right side
+    &::after {
+        content: '';
+        position: fixed;
+        top: -50%;
+        right: 0;
+        width: 100%;
+        height: 200%;
+        background: radial-gradient(ellipse at 80% 50%, rgba(200, 150, 255, 0.3) 0%, transparent 50%);
+        animation: aurora 25s ease-in-out infinite reverse;
+        pointer-events: none;
+        z-index: 0;
+    }
+}
+
+// Animated stars layer
+main::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20% 30%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 60% 70%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 50% 50%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 80% 10%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 90% 60%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 30% 80%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 10% 40%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(2px 2px at 40% 90%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 70% 20%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(1.5px 1.5px at 15% 60%, #fff, rgba(255, 255, 255, 0)),
+        radial-gradient(1px 1px at 85% 35%, #fff, rgba(255, 255, 255, 0));
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    pointer-events: none;
+    z-index: 1;
+    animation: 
+        twinkle 3s ease-in-out infinite,
+        floatingStar 6s ease-in-out infinite;
+}
+
+// Forest silhouette with animation
+main::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="forestGrad" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%%" style="stop-color:%23370d52;stop-opacity:0.8" /><stop offset="100%%" style="stop-color:%23150027;stop-opacity:1" /></linearGradient></defs><g fill="url(%23forestGrad)"><polygon points="0,200 50,80 100,200"/><polygon points="80,200 140,60 200,200"/><polygon points="150,200 220,70 290,200"/><polygon points="250,200 320,50 390,200"/><polygon points="350,200 420,90 490,200"/><polygon points="450,200 520,70 590,200"/><polygon points="550,200 620,85 690,200"/><polygon points="650,200 720,60 790,200"/><polygon points="750,200 820,95 890,200"/><polygon points="850,200 920,65 990,200"/><polygon points="950,200 1020,80 1090,200"/><polygon points="1050,200 1120,70 1200,200"/></g></svg>') no-repeat center bottom;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 1;
+}
+
+// Comet 1
+&::comet1 {
+    content: '';
+    position: fixed;
+    width: 3px;
+    height: 3px;
+    background: #fff;
+    border-radius: 50%;
+    animation: comet 15s ease-in infinite;
+    box-shadow: 0 0 20px rgba(200, 150, 255, 0.8),
+                0 0 40px rgba(138, 43, 226, 0.4);
+    pointer-events: none;
+    z-index: 2;
+    animation-delay: 5s;
+}
+
+// Comet 2
+&::comet2 {
+    content: '';
+    position: fixed;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    animation: comet 18s ease-in infinite;
+    box-shadow: 0 0 15px rgba(200, 150, 255, 0.6),
+                0 0 30px rgba(138, 43, 226, 0.3);
+    pointer-events: none;
+    z-index: 2;
+    animation-delay: 12s;
+}
+
+// Shooting star 1
+&::shootingStar1 {
+    content: '';
+    position: fixed;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(200, 150, 255, 0.8), transparent);
+    animation: shootingStar 10s ease-in infinite;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 2;
+    filter: drop-shadow(0 0 5px rgba(200, 150, 255, 0.8));
+    animation-delay: 8s;
+}
+
+// Shooting star 2
+&::shootingStar2 {
+    content: '';
+    position: fixed;
+    width: 80px;
+    border-radius: 50%;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.7), transparent);
+    animation: shootingStar 12s ease-in infinite;
+    pointer-events: none;
+    z-index: 2;
+    filter: drop-shadow(0 0 4px rgba(138, 43, 226, 0.7));
+    animation-delay: 18s;
+}
+
+// ============================================
+// FORM CONTAINER - GLASSMORPHISM
+// ============================================
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 40px 30px 40px;
+    gap:5px;
+    border-radius: 30px;
+    // background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 
+        0 0 30px rgba(138, 43, 226, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(200, 150, 255, 0.3);
+    animation: fadeInUp 0.8s ease-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+
+    // Glow effect
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(200, 150, 255, 0.1) 50%, 
+            transparent 100%);
+        animation: shimmer 3s infinite;
+    }
+}
+
+// ============================================
+// HEADING
+// ============================================
+.form-container h1 {
+    margin: 0 0 5px 0;
+    color: #ffffff;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
+    animation: fadeInDown 0.8s ease-out 0.1s both;
+    text-shadow: 0 2px 10px rgba(138, 43, 226, 0.3);
+}
+
+// Subtitle text under heading
+.form-container > label{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2rem;
+    font-weight: 300px;
+    margin: 5px;
+    // animation: fadeInDown 0.8s ease-out 0.15s both;
+}
+
+// ============================================
+// INPUT GROUP CONTAINER
+// ============================================
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 5px;
+    // animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+// ============================================
+// LABELS - With human-like stagger
+// ============================================
+.input-group label {
+    display: block;
+    margin: 3px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.95rem;
+    align-self: flex-start;
+    font-weight: 600;
+     padding-top: 2px;
+    align-items: center;
+    letter-spacing: 0.3px;
+    
+}
+
+// ============================================
+// INPUT FIELDS - ID-SPECIFIC STYLING
+// ============================================
+
+// General input styles
+.input-group input {
+    padding: 14px 18px 14px 45px;
+    border: 2px solid rgba(200, 150, 255, 0.4);
+    border-radius: 12px;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    
+   
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        transition: color 200ms ease-in-out;
+    }
+
+    // Hover state - subtle lift
+   
+
+    // Focus state - glow and pulse
+  
+
+    // Active/typing state
+   
+}
+
+// ============================================
+// BUTTON
+// ============================================
+.btn {
+    width: 100%;
+    padding: 15px 24px;
+    border: none;
+    border-radius: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #5a1e8c;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+    border-radius: 50px;
+    background-size: 200% 200%;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 10px 25px rgba(138, 43, 226, 0.2),
+        0 0 1px rgba(138, 43, 226, 0.1);
+    animation: fadeInUp 0.8s ease-out 0.55s both;
+    position: relative;
+    overflow: hidden;
+
+    // Wave effect overlay
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(255, 255, 255, 0.3) 50%, 
+            transparent 100%);
+        animation: buttonWave 600ms ease-in-out;
+        pointer-events: none;
+    }
+
+    &:hover {
+        background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
+        box-shadow: 
+            0 15px 40px rgba(138, 43, 226, 0.3),
+            0 0 1px rgba(138, 43, 226, 0.1);
+        transform: translateY(-3px);
+        animation: softBounce 0.6s ease-in-out;
+
+        
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 
+            0 5px 15px rgba(138, 43, 226, 0.15),
+            0 0 1px rgba(138, 43, 226, 0.1);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 
+            0 10px 25px rgba(138, 43, 226, 0.2),
+            0 0 0 4px rgba(200, 150, 255, 0.4);
+    }
+
+    
+}
+p{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 40px;
+}
+p #Link{
+    
+    color: #8a2be2;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+        text-decoration: underline;
+        color: #ffffff;
+    }
+}
+
+// ============================================
+// CHECKBOX STYLING
+// ============================================
+
+// ============================================
+// LINK STYLING
+// ============================================
+
+
+// ============================================
+// FORM HELPER TEXT
+// ============================================
+
+
+// ============================================
+// BOTTOM TEXT
+// ===========================================
+
+// ============================================
+// RESPONSIVE DESIGN
+// ============================================
+@media (max-width: 640px) {
+    main {
+        padding: 10px;
+    }
+
+    .form-container {
+        max-width: 100%;
+        padding: 35px 25px;
+        border-radius: 16px;
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        > p {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    .input-group {
+        gap: 18px;
+        margin-bottom: 20px;
+    }
+
+    .input-group label {
+        font-size: 0.9rem;
+    }
+
+    .input-group input {
+        padding: 12px 14px 12px 40px;
+        font-size: 16px; // Prevents zoom on iOS
+        border-radius: 10px;
+    }
+
+    .btn {
+        padding: 13px 20px;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+
+    .form-helper,
+    .form-footer,
+    .form-bottom-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-container {
+        padding: 30px 20px;
+
+        h1 {
+            font-size: 24px;
+        }
+
+        > p {
+            font-size: 0.85rem;
+        }
+    }
+
+    .form-helper {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
+
+// ============================================
+// ACCESSIBILITY
+// ============================================
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+// ============================================
+// CELESTIAL ELEMENTS - MOON
+// ============================================
+.celestial-moon {
+    position: fixed;
+    top: 12%;
+    right: 8%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 1), rgba(220, 220, 255, 0.8));
+    border-radius: 50%;
+    box-shadow: 
+        0 0 40px rgba(255, 255, 255, 0.6),
+        0 0 80px rgba(138, 43, 226, 0.3),
+        inset -15px -15px 30px rgba(0, 0, 0, 0.4);
+    animation: moonGlow 10s ease-in-out infinite, moonOrbit 25s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 3;
+    filter: drop-shadow(0 0 25px rgba(138, 43, 226, 0.25));
+}
+
+// ============================================
+// COMETS
+// ============================================
+.comet {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 3;
+    
+    &.comet-1 {
+        animation: comet 16s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+        box-shadow: 
+            -50px 0 60px 10px rgba(200, 150, 255, 0.8),
+            -100px 0 100px 20px rgba(138, 43, 226, 0.4);
+        animation-delay: 0s;
+    }
+    
+    &.comet-2 {
+        animation: comet 18s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+        width: 3px;
+        height: 3px;
+        box-shadow: 
+            -40px 0 50px 8px rgba(200, 150, 255, 0.7),
+            -80px 0 80px 15px rgba(138, 43, 226, 0.3);
+        animation-delay: 8s;
+    }
+}
+
+// ============================================
+// SHOOTING STARS
+// ============================================
+.shooting-star {
+    position: fixed;
+    pointer-events: none;
+    z-index: 3;
+    background: linear-gradient(90deg, transparent, rgba(200, 150, 255, 0.9), transparent);
+    filter: drop-shadow(0 0 6px rgba(200, 150, 255, 0.8));
+    
+    &.shooting-star-1 {
+        width: 120px;
+        height: 2px;
+        animation: shootingStar 12s ease-in-out infinite;
+        animation-delay: 3s;
+    }
+    
+    &.shooting-star-2 {
+        width: 100px;
+        height: 1.5px;
+        background: linear-gradient(90deg, transparent, rgba(138, 43, 226, 0.8), transparent);
+        animation: shootingStar 14s ease-in-out infinite;
+        animation-delay: 11s;
+        filter: drop-shadow(0 0 5px rgba(138, 43, 226, 0.7));
+    }
+}
+
+// ============================================
+// NEBULA EFFECT
+// ============================================
+.nebula {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    animation: nebulaPulse 8s ease-in-out infinite;
+    filter: blur(40px);
+}
+
+// ============================================
+// STAR FIELD (100+ STARS)
+// ============================================
+.star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    z-index: 2;
+}
+
+// Star layer 1 - Upper sky with 40+ stars
+.stars-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    z-index: 2;
+    box-shadow: 
+        50px 80px 0 0.5px #fff,
+        130px 120px 0 1px rgba(255, 255, 255, 0.8),
+        180px 50px 0 0.8px #fff,
+        220px 150px 0 0.6px rgba(255, 255, 255, 0.9),
+        310px 80px 0 0.7px #fff,
+        380px 120px 0 0.5px rgba(255, 255, 255, 0.7),
+        450px 40px 0 0.9px #fff,
+        520px 160px 0 0.6px rgba(255, 255, 255, 0.8),
+        600px 90px 0 0.7px #fff,
+        680px 130px 0 0.5px rgba(255, 255, 255, 0.9),
+        750px 70px 0 0.8px #fff,
+        820px 140px 0 0.6px rgba(255, 255, 255, 0.7),
+        900px 100px 0 0.7px #fff,
+        980px 150px 0 0.5px rgba(255, 255, 255, 0.8),
+        1050px 60px 0 0.9px #fff,
+        1120px 110px 0 0.6px rgba(255, 255, 255, 0.9),
+        1200px 80px 0 0.7px #fff,
+        1280px 160px 0 0.5px rgba(255, 255, 255, 0.7),
+        100px 250px 0 0.6px rgba(255, 255, 255, 0.8),
+        200px 300px 0 0.8px #fff,
+        320px 200px 0 0.5px rgba(255, 255, 255, 0.9),
+        420px 280px 0 0.7px #fff,
+        540px 220px 0 0.6px rgba(255, 255, 255, 0.8),
+        680px 280px 0 0.5px #fff,
+        760px 240px 0 0.9px rgba(255, 255, 255, 0.7),
+        880px 290px 0 0.6px rgba(255, 255, 255, 0.8),
+        960px 210px 0 0.7px #fff,
+        1100px 260px 0 0.5px rgba(255, 255, 255, 0.9),
+        1220px 200px 0 0.8px #fff,
+        1350px 270px 0 0.6px rgba(255, 255, 255, 0.7);
+    animation: starTwinkle1 6s ease-in-out infinite;
+}
+
+// Star layer 2 - Middle sky with 40+ stars
+.stars-2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    z-index: 2;
+    box-shadow: 
+        80px 320px 0 0.7px rgba(200, 150, 255, 0.8),
+        150px 380px 0 0.5px #fff,
+        250px 350px 0 0.9px rgba(200, 150, 255, 0.6),
+        350px 400px 0 0.6px #fff,
+        450px 330px 0 0.7px rgba(200, 150, 255, 0.7),
+        560px 390px 0 0.5px rgba(255, 255, 255, 0.9),
+        670px 350px 0 0.8px rgba(200, 150, 255, 0.8),
+        760px 420px 0 0.6px #fff,
+        890px 360px 0 0.7px rgba(200, 150, 255, 0.6),
+        980px 410px 0 0.5px #fff,
+        1100px 380px 0 0.9px rgba(200, 150, 255, 0.7),
+        1200px 340px 0 0.6px rgba(255, 255, 255, 0.8),
+        1320px 400px 0 0.7px #fff,
+        120px 480px 0 0.8px rgba(200, 150, 255, 0.9),
+        240px 520px 0 0.5px #fff,
+        360px 500px 0 0.6px rgba(200, 150, 255, 0.7),
+        480px 550px 0 0.9px rgba(255, 255, 255, 0.8),
+        600px 490px 0 0.7px #fff,
+        720px 530px 0 0.5px rgba(200, 150, 255, 0.6),
+        840px 510px 0 0.8px rgba(200, 150, 255, 0.8),
+        950px 540px 0 0.6px #fff,
+        1080px 500px 0 0.7px rgba(200, 150, 255, 0.7),
+        1180px 560px 0 0.5px rgba(255, 255, 255, 0.9),
+        1300px 520px 0 0.9px #fff,
+        200px 620px 0 0.6px rgba(200, 150, 255, 0.9),
+        340px 660px 0 0.7px #fff,
+        460px 640px 0 0.8px rgba(200, 150, 255, 0.6),
+        580px 670px 0 0.5px rgba(255, 255, 255, 0.8),
+        700px 650px 0 0.6px #fff,
+        830px 680px 0 0.9px rgba(200, 150, 255, 0.7),
+        920px 630px 0 0.7px rgba(200, 150, 255, 0.8);
+    animation: starTwinkle2 7s ease-in-out infinite 1s;
+}
+
+// Star layer 3 - Lower sky with 40+ stars
+.stars-3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    z-index: 2;
+    box-shadow: 
+        70px 700px 0 0.6px rgba(138, 43, 226, 0.8),
+        160px 750px 0 0.8px #fff,
+        280px 720px 0 0.5px rgba(138, 43, 226, 0.6),
+        390px 770px 0 0.7px rgba(255, 255, 255, 0.9),
+        510px 740px 0 0.9px rgba(138, 43, 226, 0.7),
+        630px 780px 0 0.5px #fff,
+        750px 710px 0 0.6px rgba(138, 43, 226, 0.8),
+        870px 760px 0 0.8px rgba(200, 150, 255, 0.6),
+        980px 740px 0 0.7px #fff,
+        1100px 800px 0 0.5px rgba(138, 43, 226, 0.7),
+        1220px 750px 0 0.9px rgba(255, 255, 255, 0.8),
+        1340px 790px 0 0.6px #fff,
+        110px 850px 0 0.7px rgba(138, 43, 226, 0.9),
+        220px 890px 0 0.5px rgba(200, 150, 255, 0.7),
+        350px 880px 0 0.8px #fff,
+        460px 920px 0 0.6px rgba(138, 43, 226, 0.6),
+        580px 900px 0 0.7px rgba(255, 255, 255, 0.9),
+        700px 940px 0 0.5px rgba(138, 43, 226, 0.8),
+        820px 920px 0 0.9px #fff,
+        940px 880px 0 0.6px rgba(200, 150, 255, 0.7),
+        1050px 930px 0 0.7px rgba(138, 43, 226, 0.7),
+        1180px 910px 0 0.8px rgba(255, 255, 255, 0.8),
+        1320px 950px 0 0.5px #fff;
+    animation: starTwinkle3 8s ease-in-out infinite 2s;
+}
+
+// Star glow enhancement - subtle glow pulse
+.star-glow {
+    position: fixed;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+    animation: starGlow 4s ease-in-out infinite;
+}
