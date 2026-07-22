@@ -1,0 +1,139 @@
+
+.main{
+overflow: hidden;
+padding-left:20px;
+
+}
+.nav{
+    position :relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px;
+    margin: 4px;
+   
+    
+}
+.nav h3{
+     text-transform: uppercase;
+    // gap: 200px;
+    font-weight: 1000;
+    color: transparent;
+  background: linear-gradient(90deg, #ffffff 0%, #8ed8ff 35%, #c9a7ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1.5px;
+  cursor: pointer;
+    
+}
+
+.nav h3:hover{
+      box-shadow: 0 20px 40px rgba(24, 200, 255, 0.3);
+  transform: translateY(-2px) scale(1.01);
+  filter: saturate(1.1);
+}
+
+
+.nav p:hover{
+      box-shadow: 0 20px 40px rgba(24, 200, 255, 0.3);
+  transform: translateY(-2px) scale(1.01);
+  filter: saturate(1.1);
+}
+.links{
+     position :relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px;
+    margin-left:auto;
+    gap: 5px;
+
+
+}
+.links p{
+    font-weight:800;
+    padding: 10px 40px;
+    margin: 0px 10px;
+    
+}
+
+.heading{
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    max-width:800px;
+    position: relative;
+}
+h1{
+    justify-content: flex-start;
+    align-items: center;
+    margin:55px ;
+    display: flex;
+    font-size: xx-large;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 2px;
+    // border: 1px solid white;
+    padding:8px 5px;
+    text-transform: capitalize;
+    text-decoration: dotted;
+
+}
+h5{
+    justify-content: flex-start;
+    align-items: center;
+  
+    display: flex;
+   
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 2px;
+    // border: 1px solid white;
+    padding:0px 5px;
+    margin-bottom:20px;
+    text-transform: capitalize;
+    text-decoration: dotted;
+
+}
+button{
+     position: relative;
+  
+  padding: 0.95rem 1.3rem;
+  display: flex;
+  margin: auto;
+ justify-content: flex-start;
+ align-items: center;
+  cursor:pointer;
+  border: none;
+  border-radius: 999px;
+  color: white;
+  background: linear-gradient(135deg, #7c5cff 0%, #18c8ff 100%);
+  box-shadow: 0 16px 35px rgba(24, 200, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  letter-spacing: 0.01em;
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer{
+    padding-top:30px;
+    position:relative;
+    display:flex;
+    align-items: end;
+    justify-content: baseline;
+    margin-bottom: auto;
+    margin-top: 20px;
+    
+}
+.footer p{
+    position: relative;
+    display:flex;
+    align-items: end;
+    justify-content: baseline;
+    margin-bottom:auto;
+    margin-top: 20px;
+    
+}

@@ -1,9 +1,11 @@
 import {useContext, useEffect} from 'react'
 import { AuthContext } from '../auth.context'
 import { login,register,logout,getMe } from '../pages/services/auth.api'
+import { useNavigate } from 'react-router'
 
 export const useAuth=() =>{
     const context = useContext(AuthContext)
+    const navigate = useNavigate()
     const {user, setUser, loading, setLoading} = context
 
     const handleLogin = async({email, password}) =>{
@@ -24,6 +26,7 @@ export const useAuth=() =>{
         try{
         const data = await register({email,username,name, password}) 
         setUser(data.user)
+        return data
         }catch(err) {
             console.log("handle register error : ",err)
         }finally{
@@ -36,8 +39,9 @@ export const useAuth=() =>{
         try{
         const data = await logout() 
         setUser(null)
+        navigate('/login')
         }catch(err){
-            console.log("hadle logout error : ",err)
+            console.log("handle logout error : ",err)
                }finally{
         setLoading(false)
                }
@@ -55,7 +59,7 @@ export const useAuth=() =>{
             }
         }
         getAndSetUser()
-    })
+    }, [setUser,setLoading])
 
-    return (user, loading, handleRegister, handleLogin, handleLogout)
+    return {user, loading, handleLogin ,handleRegister, handleLogout}
 }

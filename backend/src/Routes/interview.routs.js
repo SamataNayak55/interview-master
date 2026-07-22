@@ -13,5 +13,13 @@ const interviewRouter = express.Router()
 
 interviewRouter.post('/', authMiddleware.authUser,upload.single("resume") ,interviewController.generateInterviewReportController)
 
+interviewRouter.get("/report/:interviewId", authMiddleware.authUser,interviewController.getInterviewReportByIdController)
+
+// get all interview report of logedin user
+interviewRouter.get("/", authMiddleware.authUser,interviewController.getAllInterviewReportsController)
+
+interviewRouter.delete('/report/:interviewId', authMiddleware.authUser, interviewController.deleteReportById)
+
+
 
 module.exports = interviewRouter

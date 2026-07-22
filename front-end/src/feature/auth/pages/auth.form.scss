@@ -523,7 +523,7 @@ main::after {
     padding: 30px 40px 30px 40px;
     gap:5px;
     border-radius: 30px;
-    // background: rgba(255, 255, 255, 0.08);
+     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 
@@ -574,7 +574,7 @@ main::after {
     font-size: 2rem;
     font-weight: 300px;
     margin: 5px;
-    // animation: fadeInDown 0.8s ease-out 0.15s both;
+    animation: fadeInDown 0.8s ease-out 0.15s both;
 }
 
 // ============================================
@@ -585,7 +585,7 @@ main::after {
     flex-direction: column;
     gap: 3px;
     margin-bottom: 5px;
-    // animation: fadeInUp 0.8s ease-out 0.2s both;
+     animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
 // ============================================
@@ -629,7 +629,14 @@ main::after {
     }
 
     // Hover state - subtle lift
-   
+   .input-group:hover{
+     background: linear-gradient(135deg, #f0f0f0 0%, #ffffff 100%);
+        box-shadow: 
+            0 15px 40px rgba(138, 43, 226, 0.3),
+            0 0 1px rgba(138, 43, 226, 0.1);
+        transform: translateY(-3px);
+        // animation: softBounce 0.6s ease-in-out;
+   }
 
     // Focus state - glow and pulse
   
@@ -1074,4 +1081,24 @@ p #Link{
     pointer-events: none;
     z-index: 2;
     animation: starGlow 4s ease-in-out infinite;
+}
+
+.head{
+    position: relative;
+    display:flex;
+   
+    
+}
+.arrow{
+    position: relative;
+    display: flex;
+   margin-left: auto;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: linear-gradient(135deg, #7c5cff 0%, #18c8ff 100%);
+  box-shadow: 0 16px 25px rgba(24, 200, 255, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  letter-spacing: 0.01em;
+  border-radius: 999px;
 }

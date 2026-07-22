@@ -2,6 +2,7 @@ const {GoogleGenAI} = require('@google/genai')
 const {z} = require('zod')
 const {zodToJsonSchema} = require('zod-to-json-schema')
 
+
 const ai = new GoogleGenAI({
     apiKey: process.env.GOOGLE_GENAI_API_KEY
 })
@@ -51,7 +52,7 @@ The JSON must exactly match this structure:
 }
 
 Generate:
-
+- title of the job for which the report is enerated
 - 50 technical questions based on the job description and the resume
 - 50 behavioural questions based on the job description and the resume
 -  skill gaps based on the job description and the resume 
@@ -92,4 +93,8 @@ ${jobdescribe}
 }
     
 }
+
+
+
+
 module.exports = generateInterviewReport

@@ -8,7 +8,7 @@ const api = axios.create({
 export async function register({email, username, name, password}){
 
     try{ 
-const response = await  api.post('/api/auth/register',{
+const response = await api.post('/api/auth/register',{
     username,email,name,password
 })
 return response.data
@@ -21,7 +21,7 @@ console.log(err)
 export async function login({email, password}){
 
     try{ 
-const response = await  api.post('/api/auth/login',{
+const response = await api.post('/api/auth/login',{
     email,password
 })
 return response.data
@@ -34,8 +34,7 @@ console.log(err)
 export async function logout(){
 
     try{ 
-const response = await  api.get('/api/auth/logout',{
-    })
+const response = await  api.get('/api/auth/logout')
 return response.data
 }catch(err){
 console.log(err)
@@ -46,8 +45,12 @@ console.log(err)
 export async function getMe(){
 
     try{ 
-const response = await  api.get('/api/auth/get-me',{
-    })
+const response = await api.get('/api/auth/get-me',{
+    headers: {
+            'Authorization': `Bearer ${localStorage.getItem('token')}` // If using JWT
+          }
+
+})
 return response.data
 }catch(err){
 console.log("get me error",err)

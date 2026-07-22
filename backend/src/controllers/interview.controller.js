@@ -6,6 +6,8 @@ const pdfParse = require('pdf-parse');
 const generateInterviewReport = require('../services/ai.service')
 const interviewReportModel = require('../models/interviewReport.model')
 
+
+// controller to generate interview report
 async function generateInterviewReportController(req, res) {
     const resumeFile = req.file;
 
@@ -40,8 +42,58 @@ console.log(JSON.stringify(interviewReportByAI, null, 2));
     })
 }
 
+// controller to get interview report by the interview id
+
+async function getInterviewReportByIdController(req, res){
+    const {interviewID} = req.params
+
+    const interviewReport = await interviewReportModel.findOne({_id: interviewID,user: req.user.id})
+
+    if(!interviewReport){
+        return res.status(404).json({
+            message:"interview report not found"
+        })
+
+
+    }
+    res.status(200).json({
+        message:"interview report fetched successfully..",
+    interviewReport
+}
+    )
+}
+
+
+async function getAllInterviewReportsController(req, res){
+    const interviewReport  = await interviewReportModel.find({user: req.user._id }).sort({createdAt: -1}).select(" title matchScore createdAt ")
+    res.status(200).json({
+        message: "interview report fetched successfully",
+        interviewReport
+    })
+}
+
+async function deleteReportById(req,res){
+try{
+    const interviewReport = await interviewReportModel.findOneAndDelete({_id: req.params.interviewId, user: req.user._id})
+    if(!interviewReport){
+        return res.status(404).json({
+            message:"interview report not found"
+        })
+    }
+    return res.status(200).json({
+        success:true,
+        message:"interview report deleted successfully",
+        deleteReport:interviewReport
+    
+    })
+}catch(err){
+    console.log(err)
+}
+}
 
 
 
 
-module.exports = {generateInterviewReportController} 
+
+
+module.exports = {generateInterviewReportController, getInterviewReportByIdController,getAllInterviewReportsController, deleteReportById} 

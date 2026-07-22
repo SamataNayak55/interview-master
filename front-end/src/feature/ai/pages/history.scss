@@ -1,0 +1,61 @@
+.main{
+    position: relative;
+    margin:0px;
+}
+.user{
+    position: relative;
+    display: flex;
+    padding:1rem;
+    border: 0px solid white;
+    box-shadow:  0 10px 30px rgba(0, 0, 0, 0.2);
+}
+.reports{
+position: relative;
+    display :flex;
+flex-direction:column;
+}
+.report-list{
+    position: relative;
+    display: grid;
+    flex-direction:row;
+    gap: 10px;
+
+     
+}
+.report-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:9px;
+    margin:9px;
+    border:2px solid white;
+    gap:2rem;
+    
+    
+
+}
+.report-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px 38px;
+    margin-left: auto;
+    border:0.1px solid white;
+    border-radius: 100px;
+     box-shadow: 0 16px 35px rgba(24, 200, 255, 0.25);
+    cursor:pointer;
+       transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.report-btn:hover{
+    box-shadow:0 20px 40px rgbs(24,200,255.0.3);
+   
+}
+.report-btn:hover::before {
+  transform: translateX(120%);
+}
+.report-btn:active {
+  transform: scale(0.98);
+}
