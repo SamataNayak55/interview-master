@@ -45,12 +45,7 @@ console.log(err)
 export async function getMe(){
 
     try{ 
-const response = await api.get('/api/auth/get-me',{
-    headers: {
-            'Authorization': `Bearer ${localStorage.getItem('token')}` // If using JWT
-          }
-
-})
+const response = await api.get('/api/auth/get-me')
 return response.data
 }catch(err){
 console.log("get me error",err)

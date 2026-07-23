@@ -13,8 +13,10 @@ export const useAuth=() =>{
         try{
         const data = await login({email, password}) 
         setUser(data.user)
+        return data
         }catch(err){
             console.log("handle login error : ",err)
+            throw err
         } finally{
         setLoading(false)
         }
