@@ -7,11 +7,13 @@ const Interview = () => {
   const [activeTab, setActiveTab] = useState("technical");
   const { report } = useInterview();
   const {interviewId} = useParams()
-  const { getReportById, loading } = useInterview()
+  const { getReportById,getReports ,loading } = useInterview()
 
     useEffect(() =>{
     if(interviewId){
       getReportById(interviewId)
+    }else{
+      getReports();
     }
   },[interviewId])
 

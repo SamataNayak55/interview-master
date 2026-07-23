@@ -45,9 +45,9 @@ console.log(JSON.stringify(interviewReportByAI, null, 2));
 // controller to get interview report by the interview id
 
 async function getInterviewReportByIdController(req, res){
-    const {interviewID} = req.params
+    const {interviewId} = req.params
 
-    const interviewReport = await interviewReportModel.findOne({_id: interviewID,user: req.user.id})
+    const interviewReport = await interviewReportModel.findOne({_id: interviewId,user: req.user.id})
 
     if(!interviewReport){
         return res.status(404).json({
