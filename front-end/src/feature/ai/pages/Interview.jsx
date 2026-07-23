@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useInterview } from "../hooks/useInterview";
 import "./interview.scss";
-import { useParams } from "react-router-dom";
+// import { useParams } from "react-router-dom";
 
 const Interview = () => {
   const [activeTab, setActiveTab] = useState("technical");
   const { report } = useInterview();
-  const {interviewId} = useParams()
-  const { getReportById,getReports ,loading } = useInterview()
+  // const {interviewId} = useParams()
+  const { loading } = useInterview()
 
-    useEffect(() =>{
-    if(interviewId){
-      getReportById(interviewId)
-    }else{
-      getReports();
-    }
-  },[interviewId])
+  //   useEffect(() =>{
+  //   if(interviewId){
+  //     getReportById(interviewId)
+  //   }else{
+  //     getReports();
+  //   }
+  // },[interviewId])
 
 
   if(loading || !report){
