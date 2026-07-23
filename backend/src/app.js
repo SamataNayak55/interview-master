@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(cookieParser())
 app.use(cors({
     origin:"https://interview-master-gray.vercel.app/",
-    credentials:true
+    credentials:true,
 }))
 
 // imported routes here

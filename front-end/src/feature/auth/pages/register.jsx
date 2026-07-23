@@ -58,7 +58,7 @@ const Register = () => {
       <div className="form-container">
        <div className='head'>
        
-        <h1 className='arrow' onClick={()=>navigate('/')}>&#8592;</h1>
+        <h1 className='arrow' onClick={()=>navigate('/home')}>&#8592;</h1>
          <h1>Register</h1>
         </div>
         <form onSubmit={handleSubmit}>
