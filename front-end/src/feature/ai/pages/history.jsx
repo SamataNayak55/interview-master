@@ -15,7 +15,7 @@ const History = () => {
     <div className="main">
         
           <div className="user">
-            <h2>hello!!  &nbsp; {user.username} &#x2764;</h2>
+            <h2>hello!!  &nbsp; {user.username ? `${user.username}` : 'guest-user'} &#x2764;</h2>
             <h7 className='report-btn' onClick={handleLogout}> logout </h7>
             </div>
 

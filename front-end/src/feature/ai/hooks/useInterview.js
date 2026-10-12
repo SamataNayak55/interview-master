@@ -30,7 +30,7 @@ export const useInterview =() =>{
         }finally{
             setLoading(false)
         }
-        return response?.interviewReport || null
+        return response?.interviewReport 
     }
 
     const getReportById = async (interviewId) => {

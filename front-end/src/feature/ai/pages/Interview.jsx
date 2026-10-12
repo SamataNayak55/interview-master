@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useInterview } from "../hooks/useInterview";
 import "./interview.scss";
-// import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router";
+import { useParams } from "react-router-dom";
 
 const Interview = () => {
   const [activeTab, setActiveTab] = useState("technical");
-  const { report } = useInterview();
-  // const {interviewId} = useParams()
+  const { report,getReportById } = useInterview();
+  const {interviewId} = useParams()
   const { loading } = useInterview()
+  const navigate = useNavigate()
 
-  //   useEffect(() =>{
-  //   if(interviewId){
-  //     getReportById(interviewId)
-  //   }else{
-  //     getReports();
-  //   }
-  // },[interviewId])
+    useEffect(() =>{
+    if(interviewId){
+      getReportById(interviewId)
+    }
+  },[interviewId])
 
 
   if(loading || !report){
@@ -24,7 +24,7 @@ const Interview = () => {
     )
   }
 
-  // console.log(report)
+  console.log(report)
 
   // Score color helper logic
   const getScoreClass = (score) => {
@@ -64,8 +64,11 @@ const Interview = () => {
 
       {/* MAIN CONTENT AREA */}
       <section className="main-content">
+        <div className="nav">
         <h1 className="job-title">{report.title || "Software Engineer Intern"}</h1>
-
+        <button onClick={()=>navigate('/home')}>home</button>
+        <button onClick={()=> navigate('/history')}>history</button>
+</div>
         <div className="tab-body">
           {/* Technical Questions */}
           {activeTab === "technical" && (

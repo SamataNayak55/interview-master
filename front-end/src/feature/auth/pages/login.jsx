@@ -11,18 +11,23 @@ const navigate = useNavigate()
 
 const[email, setEmail] = useState("")
 const[password, setPassword] = useState("")
+const[errorMessage, setErrorMessage] = useState("")
 
 
     const handleSubmit = async(e) => {
       e.preventDefault()
+
       try{
       await handleLogin({email, password})
-      console.log("before navigating to home page")
       navigate('/home')
-      console.log("after navigating to home page")
     
   }catch(err){
     console.log("handle login error", err)
+    setErrorMessage(
+      err.response?.status === 400
+        ? "Incorrect email or password try again!!"
+        : "Unable to log in right now. Please try again."
+    )
   }
 }
 
@@ -63,18 +68,28 @@ const[password, setPassword] = useState("")
         <div className="input-group">
             <label htmlFor="email">Email</label>
             <input 
-            onChange={(e) =>{setEmail(e.target.value)}}
+            onChange={(e) => setEmail(e.target.value)}
             type="email" id="email" name="email" placeholder="Enter your email "/>
 
             <label htmlFor="password">Password</label>
             <input 
-            onChange={(e) => {setPassword(e.target.value)}}
+            onChange={(e) => setPassword(e.target.value)}
             type="password" id="password" name="password" placeholder="Enter your password"/>
         </div>
         <button className="btn"  >Login</button>
         </form>
         <p>Don't have an account? <Link id='Link' to="/register">Register</Link></p>
       </div>
+      {errorMessage && (
+        <div id="login-popup-backdrop">
+          <div id="login-popup" role="alertdialog" aria-modal="true" aria-labelledby="login-popup-message">
+            <p id="login-popup-message">{errorMessage}</p>
+            <button id="login-popup-button" type="button" onClick={() => setErrorMessage("")}>
+              Try again
+            </button>
+          </div>
+        </div>
+      )}
     </main>
   )
 }
