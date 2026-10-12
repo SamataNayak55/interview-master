@@ -1,7 +1,8 @@
 import axios from "axios"
 
 const api = axios.create({
-    baseURL: "https://interview-master-8fs9.onrender.com",
+ baseURL: "https://interview-master-8fs9.onrender.com",
+    // baseURL:"http://localhost:3000",
     withCredentials: true
 })
 
@@ -19,15 +20,10 @@ console.log(err)
 
 
 export async function login({email, password}){
-
-    try{ 
 const response = await api.post('/api/auth/login',{
     email,password
 })
 return response.data
-}catch(err){
-console.log(err)
-}
 }
 
 
@@ -51,4 +47,3 @@ return response.data
 console.log("get me error",err)
 }
 }
-

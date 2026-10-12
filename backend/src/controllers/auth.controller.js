@@ -55,7 +55,7 @@ async function registerUserController(req, res) {
             httpOnly: true,
             secure:true,
             sameSite:'none',
-            maxAge:24*60*60*1000,
+            // maxAge:24*60*60*1000,
         })
 
         res.status(201).json({
@@ -74,10 +74,10 @@ async function registerUserController(req, res) {
 
 async function loginUserController(req, res) {
 
-    const {email, username, password} = req.body
+    const {email, password} = req.body
  
     const user = await userModel.findOne({
-        $or : [{email}, {username}]
+     email
     })
 
     if(!user){
@@ -104,7 +104,7 @@ async function loginUserController(req, res) {
             httpOnly: true,
             secure:true,
             sameSite:'none',
-            maxAge:24*60*60*1000,
+            // maxAge:24*60*60*1000,
         })
 
         res.status(201).json({
