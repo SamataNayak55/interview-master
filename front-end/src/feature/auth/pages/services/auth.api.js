@@ -1,8 +1,8 @@
 import axios from "axios"
 
 const api = axios.create({
-    // baseURL: "https://interview-master-8fs9.onrender.com",
-    baseURL:"http://localhost:3000",
+ baseURL: "https://interview-master-8fs9.onrender.com",
+    // baseURL:"http://localhost:3000",
     withCredentials: true
 })
 
